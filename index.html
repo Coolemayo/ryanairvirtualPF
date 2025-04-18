@@ -1,32 +1,71 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PF Virtual Airline</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Ryanair Virtual</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Willkommen bei PF Lufthansa Virtual</h1>
-        <p>Dein virtuelles Flugerlebnis beginnt hier.</p>
-        <a href="https://discord.com" target="_blank" class="btn">Jetzt beitreten</a>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <img src="logo.png" alt="Logo" class="logo">
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#fleet">Flotte</a>
+        <a href="#" id="login-btn">Login</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="about">
-        <h2>Über uns</h2>
-        <p>Wir sind eine virtuelle Fluggesellschaft auf Roblox. Mit Leidenschaft fürs Fliegen und einer engagierten Community bieten wir realistische Flugerlebnisse.</p>
-    </section>
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="overlay">
+      <h1>Entdecke die Welt mit Ryanair Virtual</h1>
+      <p>Erlebe realistische Flüge in unserer Community.</p>
+      <a href="#fleet" class="btn">Unsere Flotte</a>
+    </div>
+  </section>
 
-    <section class="flights">
-        <h2>Unsere Flüge</h2>
-        <p>Hier findest du bald unseren Flugplan und Streckennetz.</p>
-    </section>
+  <!-- Fleet -->
+  <section id="fleet" class="fleet">
+    <h2>Unsere Flotte</h2>
+    <div class="fleet-grid">
+      <div class="plane fade-in"><img src="plane1.jpg" alt="Aircraft 1"><p>Boeing 737‑800</p></div>
+      <div class="plane fade-in delay-1"><img src="plane2.jpg" alt="Aircraft 2"><p>Boeing 737‑700</p></div>
+      <div class="plane fade-in delay-2"><img src="plane3.jpg" alt="Aircraft 3"><p>Boeing 737‑900ER</p></div>
+      <div class="plane fade-in delay-3"><img src="plane4.jpg" alt="Aircraft 4"><p>Boeing 737‑MAX</p></div>
+    </div>
+  </section>
 
-    <footer>
-        <p>© 2025 PF Lufthansa Virtual - Nicht offiziell mit Lufthansa verbunden</p>
-    </footer>
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content slide-down">
+      <span class="close">&times;</span>
+      <h3>Login</h3>
+      <input type="text" id="user" placeholder="Benutzername">
+      <input type="password" id="pass" placeholder="Passwort">
+      <button id="do-login">Anmelden</button>
+    </div>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- Flights (hidden until login) -->
+  <section id="flights" class="flights hidden">
+    <h2>Deine Flüge</h2>
+    <table>
+      <thead>
+        <tr><th>Flug</th><th>Von</th><th>Nach</th><th>Zeit</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>RYV123</td><td>BER</td><td>HAM</td><td>08:30</td></tr>
+        <tr><td>RYV456</td><td>MUC</td><td>BRS</td><td>12:15</td></tr>
+        <tr><td>RYV789</td><td>FRA</td><td>STN</td><td>17:45</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
